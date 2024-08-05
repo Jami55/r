@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS
+        </title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+            .header {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="header"> ROCK PAPER SCISSOR GAME </h1>
+        <div id="alert_container">
+            <h1> Please At first enter your name and read the rules of the game above the button then play the game IN SHA ALLAH </h1>
+        </div>
+        <div id="lc1">
+            <label for="text"> Enter Your Name : </label>
+        </div> <br>
+        <div id="ic1">
+            <input id="input1" type="text">
+        </div> <br>
+        <div id="r1">
+            <h1 id="o1"> </h1>
+        </div>
+        <div id="r2">
+            <h1 id="o2"> </h1>
+        </div>
+        <div id="r3">
+            <h1 id="o3"> </h1>
+        </div>
+        <div id="r4">
+            <h1 id="o4"> </h1>
+        </div>
+        <div id="r5">
+            <h1 id="o5"> </h1>
+        </div>
+        <div id="r6">
+            <h1 id="o6"> </h1>
+        </div>
+        <div id="r7">
+            <h1 id="o7"> </h1>
+        </div>
+        <div id="r8">
+            <h1 id="o8"> </h1>
+        </div>
+        <div id="r9">
+            <h1 id="o9"> </h1>
+        </div>
+        <div id="r10">
+            <h1 id="o10"> </h1>
+        </div>
+        <div id="r11">
+            <h1 id="o11"> </h1>
+        </div>
+        <div id="lc2">
+            <label for="text"> Enter how many matches you want to play with computer : </label>
+        </div> <br>
+        <div id="ic2">
+            <input id="input2" type="text">    
+        </div> <br>
+        <div id="bc">
+            <button id="button"> Click to start the game </button>   
+        </div> <br>
+        <h1 id="o14"> </h1>
+        <h1 id="o15"> </h1>
+        <h1 id="o16"> </h1>
+        <h1 id="o17"> </h1>
+        <h1 id="o18"> </h1>
+        <h1 id="o19"> </h1>
+        <h1 id="o20"> </h1>
+        <h1 id="o21"> </h1>
+        <h1 id="o22"> </h1>
+        <h1 id="o23"> </h1>
+        <h1 id="o24"> </h1> 
+        <h1 id="o25"> </h1>
+        <h1 id="o26"> </h1>
+        <h1 id="o27"> </h1>
+        <h1 id="o28"> </h1>
+        <h1 id="o29"> </h1>
+        <h1 id="o30"> </h1>
+        <h1 id="o31"> </h1> 
+        <h1 id="o32"> </h1>
+        <h1 id="o33"> </h1>
+        <h1 id="o34"> </h1>
+        <h1 id="o35"> </h1>
+        <h1 id="o36"> </h1>
+        <h1 id="o37"> </h1>
+        <p id="errormessage"> </p>
+        <script>
+            try {
+                function instructions () {
+                    document.getElementById("o1").innerHTML = "In these game , there will be one player." + "<br>" ;
+                    document.getElementById("o2").innerHTML = "He will play rock paper scissor game with computer." + "<br>" ;
+                    document.getElementById("o3").innerHTML = "Rules of the game is given below : " + "<br>" ;
+                    document.getElementById("o4").innerHTML = "1.First turn is player's turn. Player will display." + "<br>" ;
+                    document.getElementById("o5").innerHTML = "2.Then next turn is computer's turn. Computer will display." + "<br>" ;
+                    document.getElementById("o6").innerHTML = "3.To choose rock , player have to write 'R' in the window textbox." + "<br>" ;
+                    document.getElementById("o7").innerHTML = "4.To choose paper , player have to write 'P' in the window textbox." + "<br>" ;
+                    document.getElementById("o8").innerHTML = "5.To choose scissor , player have to write 'S' in the window textbox." + "<br>" ;
+                    document.getElementById("o9").innerHTML = "6.Before starting the game , player have to write how many matches he want to play with computer." + "<br>" ;
+                    document.getElementById("o10").innerHTML = "7.Then game will start IN SHA ALLAH." + "<br>" ;
+                    document.getElementById("o11").innerHTML = "These are the rules.Jazakallahu Khoiran." + "<br>" ;
+                }
+                var btn , call_instructions ;
+                call_instructions - instructions () ;
+                btn = document.getElementById("button") ;
+                btn.onclick = function () {
+                    var name , call_f , match , div1 , div2 , div3 , div4 , div5 , div6 , div7 , div8 , div9 , div10 , div11 , div12 , div13 , div14 , div15 , div16 , div17 ;
+                    name = document.getElementById("input1").value ;
+                    match = parseInt(document.getElementById("input2").value) ;
+                    function f (name , match) {
+                        var w , computer , pc = 0 , cc = 0 ;
+                        for(var i = 0 ; i < match ; i ++) {
+                            w = window.prompt("ROCK.....PAPER.....SCISSOR . Display : ") ;
+                            while (w !== 'R' && w !== 'P' && w !== 'S') {
+                                w = window.prompt("Sorry , You cheated the game. You writing words are incorrect. Please write the words correctly.") ;            
+                            }
+                            computer = Math.floor(Math.random() * 3) ;
+                            if (computer === 0 && w === 'R') {
+                                document.getElementById("o14").innerHTML = "Computer display rock." + "<br>" ;
+                                document.getElementById("o15").innerHTML = "Match tied." + "<br>" ;     
+                            } else if (computer === 0 && w === 'P') {
+                                document.getElementById("o16").innerHTML = "Computer display rock." + "<br>" ;
+                                document.getElementById("o17").innerHTML = name + " win the game." + "<br>" ;
+                                pc ++ ;
+                            } else if (computer === 0 && w === 'S') {
+                                document.getElementById("o18").innerHTML = "Computer display rock." + "<br>" ;
+                                document.getElementById("o19").innerHTML = "Computer win the game." + "<br>" ;
+                                cc ++ ; 
+                            } else if (computer === 1 && w === 'P') {
+                                document.getElementById("o20").innerHTML = "Computer display paper." + "<br>" ;
+                                document.getElementById("o21").innerHTML = "Match tied." + "<br>" ;
+                            } else if (computer === 1 && w === 'S') {
+                                document.getElementById("o22").innerHTML = "Computer display paper." + "<br>" ;
+                                document.getElementById("o23").innerHTML = name + " win the game." + "<br>" ;
+                                pc ++ ;
+                            } else if (computer === 1 && w === 'R') {
+                                document.getElementById("o24").innerHTML = "Computer display paper." + "<br>" ;
+                                document.getElementById("o25").innerHTML = "Computer win the game." + "<br>" ;
+                                cc ++ ;
+                            } else if (computer === 2 && w === 'S') {
+                                document.getElementById("o26").innerHTML = "Computer display scissor." + "<br>" ;
+                                document.getElementById("o27").innerHTML = "Match tied." + "<br>" ;    
+                            } else if (computer === 2 && w === 'R') {
+                                document.getElementById("o28").innerHTML = "Computer display scissor." + "<br>" ;
+                                document.getElementById("o29").innerHTML = name + " win the game." + "<br>" ;
+                                pc ++ ;    
+                            } else if (computer === 2 && w === 'P') {
+                                document.getElementById("o30").innerHTML = "Computer display scissor." + "<br>" ;
+                                document.getElementById("o31").innerHTML = "Computer win the game." + "<br>" ;
+                                cc ++ ;
+                            }
+                        }
+                        if (pc === cc) {
+                            document.getElementById("o32").innerHTML = "Series tied." + "<br>" ;
+                            document.getElementById("o33").innerHTML = "Series is : " + pc + " - " + cc + "<br>" ;
+                        } else if (pc > cc) {
+                            document.getElementById("o34").innerHTML = name + " win the series." + "<br>" ;
+                            document.getElementById("o35").innerHTML = "Series is : " + pc + " - " + cc + "<br>" ;   
+                        } else {
+                            document.getElementById("o36").innerHTML = "Computer win the series." + "<br>" ;
+                            document.getElementById("o37").innerHTML = "Series is : " + pc + " - " + cc + "<br>" ;  
+                        }
+                        return 1 ;
+                    }
+                    call_f = f (name , match) ;
+                    div1 = document.getElementById("alert_container").innerHTML = " " ;
+                    div2 = document.getElementById("lc1").innerHTML = " " ;
+                    div3 = document.getElementById("ic1").innerHTML = " " ;
+                    div4 = document.getElementById("r1").innerHTML = " " ;
+                    div5 = document.getElementById("r2").innerHTML = " " ;
+                    div6 = document.getElementById("r3").innerHTML = " " ;
+                    div7 = document.getElementById("r4").innerHTML = " " ;
+                    div8 = document.getElementById("r5").innerHTML = " " ;
+                    div9 = document.getElementById("r6").innerHTML = " " ;
+                    div10 = document.getElementById("r7").innerHTML = " " ;
+                    div11 = document.getElementById("r8").innerHTML = " " ;
+                    div12 = document.getElementById("r9").innerHTML = " " ;
+                    div13 = document.getElementById("r10").innerHTML = " " ;
+                    div14 = document.getElementById("r11").innerHTML = " " ;
+                    div15 = document.getElementById("lc2").innerHTML = " " ;
+                    div16 = document.getElementById("ic2").innerHTML = " " ;
+                    div17 = document.getElementById("bc").innerHTML = " " ;
+                }
+            }catch(error) {
+                document.getElementById("errormessage").innerHTML = error.message + "<br>" ;
+            }     
+        </script>
+    </body>
+</html>
